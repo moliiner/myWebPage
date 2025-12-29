@@ -1,83 +1,79 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<!-- Hero Section -->
+<section id="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column: Text -->
+            <div class="col-lg-7 text-start">
+                <h1 class="display-3 fw-bold mb-3">Hello, I'm Javier Moliner</h1>
+                <p class="lead mb-4 fs-3">Software Engineer with 2+ years of experience in .NET and SQL.</p>
+                <div class="d-flex gap-3 justify-content-start">
+                    <a asp-page="/Experience" class="btn btn-light btn-lg fw-bold px-4">View My Work</a>
+                </div>
+            </div>
+            
+            <!-- Right Column: Photo and Contact Button -->
+            <div class="col-lg-5 text-center">
+                <div class="mb-4">
+                     <img src="https://placehold.co/250x250" alt="Javier Moliner" class="rounded-circle shadow-lg border border-4 border-white" style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+                <div>
+                    <a asp-page="/Contact" class="btn btn-outline-light btn-lg fw-bold px-4">CONTACT ME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+<!-- Who I am? Section -->
+<section class="bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Who I am?</h2>
+                <p class="lead text-muted">
+                    I am a passionate software developer dedicated to building robust and efficient web applications. 
+                    With over 2 years of experience in the industry, I specialize in .NET technologies and SQL databases, 
+                    creating scalable solutions that drive business value.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-            .navbar .logo {
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #1f4bd8;
-                text-decoration: none;
-            }
+<!-- Where did I study? Section -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Where did I study?</h2>
+                <p class="lead text-muted">
+                    My academic journey began at the <strong>University of Technology</strong>, where I earned my 
+                    Bachelor of Science in Computer Science (2015 - 2019). I further honed my practical skills 
+                    through an intensive <strong>Full Stack Web Development Bootcamp</strong> at Code Academy in 2020.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-            .navbar ul {
-                list-style: none;
-                display: flex;
-                gap: 1.5rem;
-                margin: 0;
-                padding: 0;
-            }
-
-                .navbar ul li a {
-                    text-decoration: none;
-                    color: #333;
-                    font-weight: 500;
-                    transition: color 0.3s ease;
-                }
-
-                    .navbar ul li a:hover {
-                        color: #1f4bd8;
-                    }
-
-        section {
-            padding: 100px 20px;
-            border-bottom: 1px solid #eee;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <a href="#" class="logo">Project</a>
-        <ul>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#studies">Studies</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Secciones simuladas -->
-    @* <section id="experience"><h2>Experience</h2></section>
-    <section id="studies"><h2>Studies</h2></section>
-    <section id="skills"><h2>Skills</h2></section>
-    <section id="contact"><h2 >Contact</h2></section>*@
-
-</body>
-</html>
+<!-- About me Section -->
+<section class="bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">About me</h2>
+                <p class="lead text-muted">
+                    Beyond coding, I am an avid learner who loves exploring new technologies and solving complex problems. 
+                    When I'm not at my computer, you can usually find me hiking in the mountains or immersed in a good 
+                    sci-fi novel. I believe in continuous improvement and the power of technology to change lives.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

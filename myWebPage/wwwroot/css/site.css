@@ -16,7 +16,9 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
-    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -54,14 +56,16 @@ section {
 
 /* Hero Section (Home) */
 #hero {
-    height: 90vh;
+    min-height: 100vh; /* Mínimo toda la pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
     color: white;
     text-align: center;
-    margin-top: -1.5rem; /* Offset for padding if needed, but layout adjustment is better */
+    margin-top: -5rem; /* Tu margin personalizado */
+    margin-bottom: 2rem; /* Espacio extra abajo si lo necesitas */
+    padding-top: 5rem; /* Compensa el margin-top negativo */
 }
 
 /* Cards */
@@ -89,6 +93,5 @@ section {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
-    background-color: #f8f9fa; /* Ensure background matches or is set */
-    margin-top: auto; /* Push to bottom if using flex column, redundant with main flex:1 but safe */
+    background-color: #f8f9fa;
 }

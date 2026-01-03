@@ -4,35 +4,73 @@
     ViewData["Title"] = "Experience";
 }
 
-<div class="container">
-    <h2 class="section-title">Professional Experience</h2>
+<div class="container py-5">
+    <h1 class="section-title">JOB EXPERIENCE</h1>
+
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <h4 class="card-title text-primary fw-bold">Java Developer</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">PaynoPain Solutions S.L.</h5>
+        <div class="col-lg-10">
+
+            <!-- Job 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
+                    <h3 class="experience-title"><strong>JAVA DEVELOPER</strong></h3>
+                    <div class="experience-company">PaynoPain Solutions S.L.</div>
+                    <div class="experience-date">February 2024 - July 2024</div>
+                    <a href="https://paynopain.com/" class="explore-btn explore-paynopain">EXPLORE</a>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="row align-items-center experience-description">
+                        <div class="col-lg-7">
+                            <p>
+                                Main person responsible for the development of Single Sign-On for unified authentication
+                                of the company's internal services.
+                            </p>
                         </div>
-                        <span class="badge bg-primary rounded-pill">Feb 2024 - Jul 2024</span>
+                        <div class="col-lg-5 text-center">
+                            <img src="~/img/paynopain.jpg"
+                                 alt="PaynoPain"
+                                 class="rounded-circle shadow-lg img-fluid"
+                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;">
+                        </div>
                     </div>
-                    <p class="card-text mt-3">Main person responsible for the development of Single Sign-On for unified authentication of the company's internal services</p>
                 </div>
             </div>
 
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <h4 class="card-title text-primary fw-bold">Software Engineer</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">STN Cer·mica</h5>
-                        </div>
-                        <span class="badge bg-secondary rounded-pill">Sep 2024 - Present</span>
-                    </div>
-                    <p class="card-text mt-3">SQL and .NET developer responsible for maintaining the company's databases. I implement solutions for the ERP and also resolve technical issues.</p>
+            <!-- Arrow -->
+            <div class="row my-4">
+                <div class="col-md-5 ps-md-5">
+                    <div class="dashed-arrow"></div>
                 </div>
             </div>
+
+            <!-- Job 2 -->
+            <div class="row align-items-center">
+                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
+                    <h3 class="experience-title"><strong>SOFTWARE ENGINEER</strong></h3>
+                    <div class="experience-company">STN Cer√°mica</div>
+                    <div class="experience-date">September 2024 - Present</div>
+                    <a href="https://stnceramica.es/" class="explore-btn explore-stn">EXPLORE</a>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="row align-items-center experience-description">
+                        <div class="col-lg-7">
+                            <p>
+                                SQL and .NET developer responsible for maintaining the company's databases.
+                                I implement solutions for the ERP and also resolve technical issues.
+                            </p>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <img src="~/img/stn.jpg"
+                                 alt="STN Ceramica"
+                                 class="square shadow-lg img-fluid"
+                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

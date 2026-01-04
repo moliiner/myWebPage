@@ -4,24 +4,24 @@
     ViewData["Title"] = "Contact";
 }
 
-<div class="container">
+<div class="container py-5">
     <h1 class="section-title">CONTACT ME</h1>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body p-4">
-                    <form>
+                    <form id="contactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100 btn-lg">Send Message</button>
                     </form>
@@ -34,3 +34,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        
+        // Subject: Name
+        // Body: Message (plus the email for reference)
+        var subject = name;
+        var body = message + "\n\n(Contact Email: " + email + ")";
+        
+        window.location.href = "mailto:jamolnav@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+</script>

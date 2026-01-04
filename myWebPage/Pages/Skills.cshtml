@@ -4,23 +4,92 @@
     ViewData["Title"] = "Skills";
 }
 
-<div class="container text-center">
+<!-- Add Devicon CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<div class="container py-5">
     <h1 class="section-title">SKILLS & KNOWLEDGE</h1>
+
+    <!-- Languages Section -->
+    <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-4 mb-4">
+            <img src="~/img/es.jpg" alt="Spanish" class="language-flag mb-3">
+            <h4 class="text-uppercase fw-bold">NATIVE</h4>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="~/img/gb.jpg" alt="English" class="language-flag mb-3">
+            <h4 class="text-uppercase fw-bold">ADVANCED</h4>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="~/img/kr.jpg" alt="Korean" class="language-flag mb-3">
+            <h4 class="text-uppercase fw-bold">BASIC</h4>
+        </div>
+    </div>
+
+    <!-- Technologies Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div class="row text-center row-cols-2 row-cols-md-5 g-4">
+                <div class="col">
+                    <i class="devicon-csharp-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">C#</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-azuresqldatabase-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">SQL</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-dotnetcore-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">.NET</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-azure-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">AZURE</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-html5-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">HTML</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-css3-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">CSS</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-visualstudio-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">VISUAL STUDIO</p>
+                </div>
+                <div class="col">
+                    <i class="bi bi-database-gear tech-icon text-secondary"></i>
+                    <p class="mt-2 fw-bold">DB DESIGN</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-java-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">JAVA</p>
+                </div>
+                <div class="col">
+                    <i class="devicon-github-plain colored tech-icon"></i>
+                    <p class="mt-2 fw-bold">GITHUB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soft Skills Section -->
     <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card p-4">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <span class="badge bg-secondary skill-badge">HTML5</span>
-                    <span class="badge bg-secondary skill-badge">CSS3</span>
-                    <span class="badge bg-warning text-dark skill-badge">JavaScript</span>
-                    <span class="badge bg-primary skill-badge">C#</span>
-                    <span class="badge bg-info text-dark skill-badge">React</span>
-                    <span class="badge bg-success skill-badge">Pyhton</span>
-                    <span class="badge bg-dark skill-badge" style="background-color: #6610f2 !important;">ASP.NET Core</span>
-                    <span class="badge bg-dark skill-badge">Git</span>
-                    <span class="badge bg-info skill-badge">SQL Server</span>
-                    <span class="badge bg-primary skill-badge">Azure DevOps</span>
-                    <span class="badge bg-success skill-badge">Java</span>
+        <div class="col-lg-8">
+            <div class="row text-center">
+                <div class="col-md-6 mb-3">
+                    <ul class="list-unstyled soft-skills-list">
+                        <li><strong>• PROBLEM SOLVING</strong></li>
+                        <li><strong>• LOGICAL THINKING</strong></li>
+                        <li><strong>• TASK ORGANIZATION</strong></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <ul class="list-unstyled soft-skills-list">
+                        <li><strong>• TEAMWORK</strong></li>
+                        <li><strong>• CONTINUOUS LEARNING</strong></li>
+                    </ul>
                 </div>
             </div>
         </div>

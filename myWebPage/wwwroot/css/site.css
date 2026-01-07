@@ -1,11 +1,11 @@
 html {
-  font-size: 14px;
+    font-size: 15px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 17px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* Navbar */
 .navbar {
+    padding: 1rem 0;
     background-color: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -40,6 +41,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 .nav-link {
     font-weight: 600;
+    font-size: 1.05rem;
     color: #4a5568 !important;
     transition: color 0.2s ease;
     position: relative;
@@ -66,17 +68,24 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* Common Section Styles */
 section {
-    padding: 60px 0;
+    padding: 90px 0;
 }
 
 .section-title {
     margin-bottom: 50px;
     text-align: center;
+    font-size: 2.2rem;
     font-weight: 700;
     position: relative;
     color: #1a202c;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.6rem;
+    }
 }
 
 .section-title::after {
@@ -136,13 +145,19 @@ section {
 /* Cards */
 .card {
     border: none;
+    border-radius: 16px;
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 24px;
     overflow: hidden;
 }
+
+.card-body {
+    padding: 2rem;
+}
+
 
 .card:hover {
     transform: translateY(-5px);
@@ -279,9 +294,9 @@ section {
 }
 
 .experience-description p {
-    line-height: 1.8;
+    line-height: 1.9;
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 .dashed-arrow {

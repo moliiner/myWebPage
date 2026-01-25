@@ -9,7 +9,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--primary);
 }
 
 body {
@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 80px; /* Space for fixed navbar */
+    padding-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     padding: 1rem 0;
     background-color: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(47, 133, 90, 0.15);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 }
@@ -42,13 +43,14 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .nav-link {
     font-weight: 600;
     font-size: 1.05rem;
-    color: #4a5568 !important;
+    color: #1a202c !important;
     transition: color 0.2s ease;
     position: relative;
 }
 
-.nav-link:hover {
-    color: #0d6efd !important;
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
 }
 
 .nav-link::after {
@@ -58,7 +60,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0d6efd;
+    background-color: var(--primary);
     transition: width 0.3s ease;
 }
 
@@ -66,7 +68,22 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     width: 100%;
 }
 
-/* Common Section Styles */
+.navbar-toggler {
+    border-color: var(--primary);
+}
+
+.navbar-toggler-icon {
+    filter: invert(38%) sepia(23%) saturate(600%) hue-rotate(95deg);
+}
+
+/* Theme Colors */
+.theme-green {
+    --primary: #2f855a;
+    --primary-dark: #276749;
+    --primary-light: #9ae6b4;
+}
+
+/* Sections */
 section {
     padding: 90px 0;
 }
@@ -93,24 +110,12 @@ section {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
     margin: 15px auto 0;
     border-radius: 2px;
 }
 
-/* Hero Section (Home) */
-/*#hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-    color: white;
-    text-align: center;
-    margin-top: -80px;
-    padding-top: 80px;
-}*/
-
+/* Hero */
 #hero {
     position: relative;
     min-height: 100vh;
@@ -141,13 +146,15 @@ section {
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
+#hero img {
+    border-color: var(--primary) !important;
+}
 
 /* Cards */
 .card {
     border: none;
     border-radius: 16px;
     background: white;
-    border-radius: 16px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 24px;
@@ -157,7 +164,6 @@ section {
 .card-body {
     padding: 2rem;
 }
-
 
 .card:hover {
     transform: translateY(-5px);
@@ -177,59 +183,47 @@ section {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
-    background-color: #f8f9fa;
+    background-color: #f0fdf4;
+    border-top: 1px solid rgba(47, 133, 90, 0.15);
 }
 
-/* Experience Section Custom Styles */
-.experience-title {
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+/* Buttons */
+.btn-success {
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
-.experience-company {
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.btn-success:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
-.experience-date {
-    font-weight: 300;
-    color: #666;
-    margin-bottom: 15px;
+.text-success {
+    color: var(--primary) !important;
 }
 
-.studies-title {
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+/* Contact Button */
+.contact {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
-.studies-company {
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.contact:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
 }
 
-.studies-date {
-    font-weight: 300;
-    color: #666;
-    margin-bottom: 15px;
+/* Form Controls */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(47, 133, 90, 0.25);
 }
 
-.uji-logo {
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
-
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-}
-
-
+/* Explore Buttons */
 .explore-btn {
     border: 1px solid #000;
     color: #000;
@@ -248,49 +242,60 @@ section {
     text-decoration: none;
 }
 
-/* Contact */
-.contact {
-    background-color: #ffffff;
-}
-
-.contact:hover {
-    background-color: #38bdff;
-}
-
 /* PaynoPain */
 .explore-paynopain {
     background-color: #e74747;
 }
 
-.explore-paynopain:hover {
-    background-color: #9b0000;
-}
+    .explore-paynopain:hover {
+        background-color: #9b0000;
+    }
 
 /* STN */
 .explore-stn {
     background-color: #4cc03c;
 }
 
-.explore-stn:hover {
-    background-color: #002e6b;
-}
+    .explore-stn:hover {
+        background-color: #002e6b;
+    }
 
 /* UJI */
 .explore-uji {
     background-color: #02eeff;
 }
 
-.explore-uji:hover {
-    background-color: #002e6b;
-}
+    .explore-uji:hover {
+        background-color: #002e6b;
+    }
 
 /* Sejong University */
 .explore-sejong {
     background-color: #ffffff;
 }
 
-.explore-sejong:hover {
-    background-color: #b40000;
+    .explore-sejong:hover {
+        background-color: #b40000;
+    }
+
+/* Experience & Studies */
+.experience-title, .studies-title {
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.experience-company, .studies-company {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.experience-date, .studies-date {
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .experience-description p {
@@ -299,35 +304,12 @@ section {
     font-size: 1.15rem;
 }
 
-.dashed-arrow {
-    border-left: 2px dashed #999;
-    height: 80px;
-    width: 2px;
-    margin-left: 50px;
-    position: relative;
-}
-
-.dashed-arrow::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: -4px;
-    width: 0; 
-    height: 0; 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #999;
-}
-
+/* Arrows */
 .experience-arrow {
     opacity: 0.8;
 }
 
-/* ===========================
-   ANIMATIONS
-   =========================== */
-
-/* Buttons */
+/* Animations */
 .btn-animado {
     transition: all 0.3s ease;
 }
@@ -337,7 +319,6 @@ section {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Fade In */
 .fade-in {
     animation: fadeIn 1.2s ease-in-out forwards;
 }
@@ -347,14 +328,12 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Slide Up */
 .slide-up {
     animation: slideUp 1s ease-in-out forwards;
 }
@@ -364,9 +343,45 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(47, 133, 90, 0.25);
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+        color: #ffffff;
+    }
+
+a[href^="mailto:"] {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    a[href^="mailto:"]:hover {
+        color: var(--primary-dark);
+    }
+
+.card:hover {
+    box-shadow: 0 15px 30px rgba(47, 133, 90, 0.15);
 }

@@ -278,6 +278,33 @@ section {
         background-color: #b40000;
     }
 
+/* DataCamp */
+.explore-datacamp {
+    background-color: #3ef085;
+}
+
+    .explore-datacamp:hover {
+        background-color: #090d3b;
+    }
+
+/* Tableau */
+.explore-tableau {
+    background-color: #ff8c00;
+}
+
+    .explore-tableau:hover {
+        background-color: #1f96d1;
+    }
+
+/* Google */
+.explore-google {
+    background-color: #ffffff;
+}
+
+    .explore-google:hover {
+        background-color: #000000;
+    }
+
 /* Experience & Studies */
 .experience-title, .studies-title {
     font-weight: 400;

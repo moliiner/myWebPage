@@ -3,43 +3,44 @@
 @{
     ViewData["Title"] = "Studies";
 }
-<div class="container py-5">
-    <h1 class="section-title" data-aos="fade-up">EDUCATION</h1>
+<div class="container page-container">
+    <h1 class="section-title">EDUCATION</h1>
 
     <div class="row justify-content-center">
         <div class="col-lg-10">
 
             <!-- Study 1 -->
-            <div class="row align-items-center mb-5" data-aos="fade-up">
-                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
-                    <h3 class="studies-title"><strong>COMPUTER ENGINEERING</strong></h3>
-                    <div class="studies-company">Universitat Jaume I (Castellon)</div>
-                    <div class="studies-date">2019 - 2024</div>
-                    <a href="https://www.uji.es/" class="explore-btn explore-uji btn-animado">EXPLORE</a>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="row align-items-center experience-description">
-                        <div class="col-lg-5 text-center">
-                            <img src="~/img/uji.png"
-                                 alt="UJI"
-                                 class="img-fluid"
-                                 data-aos="zoom-in" data-aos-delay="200">
+            <div class="card experience-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h3 class="studies-title">COMPUTER ENGINEERING</h3>
+                            <div class="studies-company">Universitat Jaume I (Castellon)</div>
+                            <div class="studies-date">2019 - 2024</div>
+                            <a href="https://www.uji.es/" class="btn btn-outline-primary btn-sm">EXPLORE</a>
                         </div>
-                        <div class="col-lg-7">
-                            <p>
-                                During my time at the university, I learned numerous technologies and how to use 
-                                them to make the most of them. Additionally, I spent 4 years on the university 
-                                rugby's team, where I learned the value of effort and teamwork.
-                            </p>
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center experience-description">
+                                <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                                    <img src="~/img/uji.png" alt="UJI" class="avatar-logo-square">
+                                </div>
+                                <div class="col-lg-7">
+                                    <p class="mb-0">
+                                        During my time at the university, I learned numerous technologies and how to use 
+                                        them to make the most of them. Additionally, I spent 4 years on the university 
+                                        rugby's team, where I learned the value of effort and teamwork.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Arrow -->
-            <div class="row my-5" data-aos="fade-up" data-aos-delay="150">
-                <div class="col-md-5 ps-md-5 d-flex">
+            <div class="row my-4">
+                <div class="col-md-5 d-flex justify-content-center justify-content-md-start ps-md-4">
                     <svg class="experience-arrow" width="24" height="64" viewBox="0 0 24 64" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 0V52" stroke="#6c757d" stroke-width="2" />
@@ -50,29 +51,29 @@
             </div>
 
             <!-- Study 2 -->
-            <div class="row align-items-center" data-aos="fade-up">
-                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
-                    <h3 class="studies-title"><strong>COMPUTER SCIENCE</strong></h3>
-                    <div class="studies-company">Sejong University (Seoul)</div>
-                    <div class="studies-date">August 2023 - December 2023</div>
-                    <a href="https://en.sejong.ac.kr/eng/index.do" class="explore-btn explore-sejong btn-animado">EXPLORE</a>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="row align-items-center experience-description">
-                        <div class="col-lg-5 text-center">
-                            <img src="~/img/sejong.png"
-                                 alt="Sejong University"
-                                 class="rounded-circle shadow-lg img-fluid"
-                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;"
-                                 data-aos="zoom-in" data-aos-delay="200">
+            <div class="card experience-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h3 class="studies-title">COMPUTER SCIENCE</h3>
+                            <div class="studies-company">Sejong University (Seoul)</div>
+                            <div class="studies-date">August 2023 - December 2023</div>
+                            <a href="https://en.sejong.ac.kr/eng/index.do" class="btn btn-outline-primary btn-sm">EXPLORE</a>
                         </div>
-                        <div class="col-lg-7">
-                            <p>
-                                I was an exchange student in South Korea (Seoul) and I learned about part 
-                                of their culture and to take on more responsibilities. It was a great 
-                                experience and it left a lasting impact on me.
-                            </p>
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center experience-description">
+                                <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                                    <img src="~/img/sejong.png" alt="Sejong University" class="avatar-logo">
+                                </div>
+                                <div class="col-lg-7">
+                                    <p class="mb-0">
+                                        I was an exchange student in South Korea (Seoul) and I learned about part 
+                                        of their culture and to take on more responsibilities. It was a great 
+                                        experience and it left a lasting impact on me.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,46 +89,30 @@
         <div class="col-lg-10">
 
             <!-- Certification 1 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
-                    <h3 class="studies-title">
-                        <strong>
-                            Google Advanced Data Analytics - Professional Certificate
-                        </strong>
-                    </h3>
-                    <div class="studies-company">Coursera</div>
-                    <a href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics" class="explore-btn explore-google">EXPLORE</a>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="row align-items-center experience-description">
-                        <div class="col-lg-5 text-center">
-                            <img src="~/img/google.png"
-                                 alt="Google"
-                                 class="rounded-circle shadow-lg img-fluid"
-                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;"
-                                 data-aos="zoom-in" data-aos-delay="200">
+            <div class="card experience-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h3 class="studies-title">
+                                Google Advanced Data Analytics - Professional Certificate
+                            </h3>
+                            <div class="studies-company">Coursera</div>
+                            <a href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics" class="btn btn-outline-primary btn-sm">EXPLORE</a>
                         </div>
-                        <div class="col-lg-7">
-                            <h2 class="row justify-content-center">(in progress)</h2>
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center experience-description">
+                                <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                                    <img src="~/img/google.png" alt="Google" class="avatar-logo">
+                                </div>
+                                <div class="col-lg-7 text-center text-lg-start">
+                                    <span class="status-badge">(in progress)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            @*
-            <!-- Arrow -->
-            <div class="row my-5" data-aos="fade-up" data-aos-delay="150">
-                <div class="col-md-5 ps-md-5 d-flex">
-                    <svg class="experience-arrow" width="24" height="64" viewBox="0 0 24 64" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0V52" stroke="#6c757d" stroke-width="2" />
-                        <path d="M6 46L12 52L18 46" stroke="#6c757d" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            *@
 
         </div>
     </div>

@@ -7,36 +7,36 @@
 <!-- Hero Section -->
 <section id="hero">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5">
             <!-- Left Column: Text -->
-            <div class="col-lg-7 text-start" data-aos="fade-right">
-                <h1 class="display-3 fw-bold mb-3">Hello!</h1>
-                <h1 class="display-3 fw-bold mb-3">I'm Javier Moliner</h1>
-                <p class="lead mb-4 fs-3 text-light opacity-90">Software Engineer with 2+ years of <br>experience in .NET and SQL.</p>
-                @* <div class="d-flex gap-3 justify-content-start">
-                    <a asp-page="/Experience" class="btn btn-light btn-lg fw-bold px-4">View My Work</a>
-                </div> *@
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-1">Hello!</h1>
+                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-2">I'm Javier Moliner</h1>
+                <p class="lead mb-4 fs-4 text-muted hero-anim hero-anim-3">Software Engineer with 2+ years of <br>experience in .NET and SQL.</p>
             </div>
-            
+
             <!-- Right Column: Photo and Contact Button -->
-            <div class="col-lg-5 text-center" data-aos="fade-left">
-                <div class="mb-4">
-                    <img src="~/img/jmoliner.png" alt="Javier Moliner" class="rounded-circle shadow-lg border border-4 border-white" style="width: 250px; height: 250px; object-fit: cover;">
+            <div class="col-lg-5 text-center">
+                <div class="mb-4 hero-anim hero-anim-4">
+                    <img src="~/img/jmoliner.png" alt="Javier Moliner" class="hero-portrait">
                 </div>
-                <div>
-                    <a asp-page="/Contact" class="btn btn-success btn-lg fw-bold px-5 py-3 btn-animado contact"><strong>CONTACT ME</strong></a>
+                <div class="hero-anim hero-anim-5">
+                    <a asp-page="/Contact" class="btn btn-primary btn-lg fw-bold px-5 py-3">CONTACT ME</a>
                 </div>
             </div>
         </div>
     </div>
+    <a href="#who-am-i" class="scroll-indicator" aria-label="Scroll down to the next section">
+        <i class="bi bi-chevron-double-down"></i>
+    </a>
 </section>
 
 <!-- Who I am? Section -->
-<section class="bg-white">
-    <div class="container" data-aos="fade-up">
+<section class="bg-white" id="who-am-i">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title"><strong>WHO AM I?</strong></h2>
+                <h2 class="section-title">WHO AM I?</h2>
                 <p class="lead text-muted">
                     Computer engineer with over 2 years of experience as a SQL and .NET developer, designing integration systems between 
                     ERP and WMS platforms and resolving 1,000+ production incidents across a large enterprise group. I specialize in process 
@@ -51,10 +51,10 @@
 
 <!-- Where did I study? Section -->
 <section class="bg-light">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title"><strong>WHERE DID I STUDY?</strong></h2>
+                <h2 class="section-title">WHERE DID I STUDY?</h2>
                 <p class="lead text-muted">
                     I studied Computer Engineering for four years at Universitat Jaume I (Spain), where I developed a strong technical and 
                     analytical foundation. I also completed a one-year academic exchange at Sejong University (South Korea), an experience 
@@ -67,10 +67,10 @@
 
 <!-- About me Section -->
 <section class="bg-white">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title"><strong>ABOUT ME</strong></h2>
+                <h2 class="section-title">ABOUT ME</h2>
                 <p class="lead text-muted">
                     I am a person who is passionate about technology and everything related to digital innovation. I am 
                     also deeply interested in Asian culture, especially its language, traditions, and ways of thinking, 

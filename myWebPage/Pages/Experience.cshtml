@@ -4,43 +4,43 @@
     ViewData["Title"] = "Experience";
 }
 
-<div class="container py-5">
-    <h1 class="section-title" data-aos="fade-up">JOB EXPERIENCE</h1>
+<div class="container page-container">
+    <h1 class="section-title">JOB EXPERIENCE</h1>
 
     <div class="row justify-content-center">
         <div class="col-lg-10">
 
             <!-- Job 1 -->
-            <div class="row align-items-center mb-5" data-aos="fade-up">
-                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
-                    <h3 class="experience-title"><strong>JAVA / REACT.JS DEVELOPER</strong></h3>
-                    <div class="experience-company">PaynoPain Solutions S.L. (Fintech) — University Internship</div>
-                    <div class="experience-date">February 2024 - July 2024</div>
-                    <a href="https://paynopain.com/" class="explore-btn explore-paynopain btn-animado">EXPLORE</a>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="row align-items-center experience-description">
-                        <div class="col-lg-7">
-                            <p>
-                                Implemented Single Sign-On authentication across a fintech microservices architecture using Java and AWS Cognito. 
-                                Shipped front-end features consuming REST APIs as part of a 4-person Agile/Scrum team, using Git/GitHub in Linux/Unix environments.
-                            </p>
+            <div class="card experience-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h3 class="experience-title">JAVA / REACT.JS DEVELOPER</h3>
+                            <div class="experience-company">PaynoPain Solutions S.L. (Fintech) — University Internship</div>
+                            <div class="experience-date">February 2024 - July 2024</div>
+                            <a href="https://paynopain.com/" class="btn btn-outline-primary btn-sm">EXPLORE</a>
                         </div>
-                        <div class="col-lg-5 text-center">
-                            <img src="~/img/paynopain.jpg"
-                                 alt="PaynoPain"
-                                 class="rounded-circle shadow-lg img-fluid"
-                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;"
-                                 data-aos="zoom-in" data-aos-delay="200">
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center experience-description">
+                                <div class="col-lg-7">
+                                    <p class="mb-0">
+                                        Implemented Single Sign-On authentication across a fintech microservices architecture using Java and AWS Cognito. 
+                                        Shipped front-end features consuming REST APIs as part of a 4-person Agile/Scrum team, using Git/GitHub in Linux/Unix environments.
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                                    <img src="~/img/paynopain.jpg" alt="PaynoPain" class="avatar-photo">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Arrow -->
-            <div class="row my-5" data-aos="fade-up" data-aos-delay="150">
-                <div class="col-md-5 ps-md-5 d-flex">
+            <div class="row my-4">
+                <div class="col-md-5 d-flex justify-content-center justify-content-md-start ps-md-4">
                     <svg class="experience-arrow" width="24" height="64" viewBox="0 0 24 64" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 0V52" stroke="#6c757d" stroke-width="2" />
@@ -51,30 +51,30 @@
             </div>
 
             <!-- Job 2 -->
-            <div class="row align-items-center" data-aos="fade-up">
-                <div class="col-md-5 ps-md-5 mb-3 mb-md-0">
-                    <h3 class="experience-title"><strong>ERP & DATABASE SYSTEMS ANALYST</strong></h3>
-                    <div class="experience-company">STN Cerámica — STN Group</div>
-                    <div class="experience-date">September 2024 - Present</div>
-                    <a href="https://stnceramica.es/" class="explore-btn explore-stn btn-animado">EXPLORE</a>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="row align-items-center experience-description">
-                        <div class="col-lg-7">
-                            <p>
-                                Built internal .NET tools to manage 2,200+ product formats and 200,000 SKUs, protecting the company's most critical master data 
-                                with role-based access control and full audit logging. Designed a SQL Server integration layer (triggers + stored procedures) that 
-                                eliminated manual load-date coordination for ~1,000 daily freight movements between the ERP and WMS. Resolved 1,000+ SQL Server 
-                                and Microsoft Dynamics 365 incidents in 10 months, and secured document storage by migrating to AWS Wasabi with SHA-256 hashing.
-                            </p>
+            <div class="card experience-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h3 class="experience-title">ERP & DATABASE SYSTEMS ANALYST</h3>
+                            <div class="experience-company">STN Cerámica — STN Group</div>
+                            <div class="experience-date">September 2024 - Present</div>
+                            <a href="https://stnceramica.es/" class="btn btn-outline-primary btn-sm">EXPLORE</a>
                         </div>
-                        <div class="col-lg-5 text-center">
-                            <img src="~/img/stn.jpg"
-                                 alt="STN Ceramica"
-                                 class="square shadow-lg img-fluid"
-                                 style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;"
-                                 data-aos="zoom-in" data-aos-delay="200">
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center experience-description">
+                                <div class="col-lg-7">
+                                    <p class="mb-0">
+                                        Built internal .NET tools to manage 2,200+ product formats and 200,000 SKUs, protecting the company's most critical master data 
+                                        with role-based access control and full audit logging. Designed a SQL Server integration layer (triggers + stored procedures) that 
+                                        eliminated manual load-date coordination for ~1,000 daily freight movements between the ERP and WMS. Resolved 1,000+ SQL Server 
+                                        and Microsoft Dynamics 365 incidents in 10 months, and secured document storage by migrating to AWS Wasabi with SHA-256 hashing.
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                                    <img src="~/img/stn.jpg" alt="STN Ceramica" class="avatar-logo-square">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

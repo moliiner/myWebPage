@@ -1,14 +1,14 @@
 @page
 @model SkillsModel
 @{
-    ViewData["Title"] = "Skills";
+    ViewData["Title"] = "Projects";
 }
 
 <!-- Add Devicon CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <div class="container page-container">
-    <h1 class="section-title">SKILLS & KNOWLEDGE</h1>
+    <h1 class="section-title">PROJECTS &amp; SKILLS</h1>
 
     <!-- Languages Section -->
     <div class="row justify-content-center text-center mb-5 g-4">
@@ -38,69 +38,98 @@
         </div>
     </div>
 
-    <!-- Technologies Section -->
-    <div class="row justify-content-center mb-5">
+    <!-- Projects Section -->
+    <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-body">
-                    <div class="row text-center row-cols-2 row-cols-md-5 g-4">
-                        <div class="col">
-                            <i class="devicon-azuresqldatabase-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">SQL</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-microsoftsqlserver-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">SQL SERVER</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-dotnetcore-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">.NET</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-csharp-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">C#</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-javascript-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">JAVASCRIPT</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-html5-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">HTML</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-css3-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">CSS</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-visualstudio-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">VISUAL STUDIO</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-python-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">PYTHON</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-java-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">JAVA</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-github-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">GITHUB</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-azure-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">AZURE</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-react-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">REACT.JS</p>
-                        </div>
-                        <div class="col">
-                            <i class="devicon-amazonwebservices-plain tech-icon"></i>
-                            <p class="mt-2 fw-bold">AWS</p>
-                        </div>
+                    <h4 class="fw-bold mb-2">AI-Powered Job Search Automation</h4>
+                    <p class="text-muted mb-3">
+                        Python pipeline that integrates external APIs, uses an LLM to evaluate and score information
+                        in a structured way, stores historical results, and presents them in an interactive dashboard
+                        with automatic notifications.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill"><i class="devicon-python-plain"></i> Python</span>
+                        <span class="tech-pill">REST APIs</span>
+                        <span class="tech-pill">LLM Integration</span>
+                        <span class="tech-pill"><i class="devicon-streamlit-plain"></i> Streamlit</span>
+                        <span class="tech-pill">Data Pipelines</span>
+                        <span class="tech-pill">Telegram Bot API</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-2">Product Format Management Tool</h4>
+                    <p class="text-muted mb-3">
+                        Internal .NET application with role-based access control that securely manages the critical
+                        master data of 2,200+ product formats and 200,000 SKUs, with full change auditing and Active
+                        Directory integration for per-format image management.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill"><i class="devicon-csharp-plain"></i> C#</span>
+                        <span class="tech-pill"><i class="devicon-dotnetcore-plain"></i> .NET</span>
+                        <span class="tech-pill"><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
+                        <span class="tech-pill">Active Directory</span>
+                        <span class="tech-pill">Role-Based Access Control</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-2">ERP–WMS Load-Date Synchronization System</h4>
+                    <p class="text-muted mb-3">
+                        SQL Server integration layer (triggers + stored procedures) that syncs load-date changes in
+                        real time between an external carrier app and the ERP, removing manual coordination for
+                        ~1,000 daily goods movements, with automatic alerts on discrepancies.
+                    </p>
+                    <div class="tech-pills">
+                        <span class="tech-pill"><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
+                        <span class="tech-pill">T-SQL</span>
+                        <span class="tech-pill">Triggers</span>
+                        <span class="tech-pill">Stored Procedures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Contributions -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-3">OTHER CONTRIBUTIONS</h4>
+                    <ul class="list-unstyled soft-skills-list mb-3">
+                        <li><strong>• Resolution of 1,000+ production incidents in SQL Server and Microsoft Dynamics 365 through agile triage</strong></li>
+                        <li><strong>• Secure storage architecture on AWS Wasabi with SHA-256 hashing</strong></li>
+                        <li><strong>• Recurring report generation with SQL Server Management Studio and Crystal Reports</strong></li>
+                    </ul>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Microsoft Dynamics 365</span>
+                        <span class="tech-pill"><i class="devicon-amazonwebservices-plain"></i> AWS</span>
+                        <span class="tech-pill">Crystal Reports</span>
+                        <span class="tech-pill">SSMS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="status-badge">IN PROGRESS</span>
+                    <h4 class="fw-bold mb-2 mt-2">COMING SOON</h4>
+                    <p class="text-muted mb-0">
+                        New data-oriented projects — analytics dashboards and machine learning models — are taking
+                        shape and will be showcased here as they come together.
+                    </p>
                 </div>
             </div>
         </div>

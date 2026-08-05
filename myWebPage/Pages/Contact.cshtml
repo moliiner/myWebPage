@@ -47,7 +47,12 @@
         // Body: Message (plus the email for reference)
         var subject = name;
         var body = message + "\n\n(Contact Email: " + email + ")";
-        
-        window.location.href = "mailto:jamolnav@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+        var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1"
+            + "&to=" + encodeURIComponent("jamolnav@gmail.com")
+            + "&su=" + encodeURIComponent(subject)
+            + "&body=" + encodeURIComponent(body);
+
+        window.open(gmailUrl, '_blank');
     });
 </script>

@@ -275,7 +275,6 @@ section {
     background-image: linear-gradient(135deg, var(--accent-from), var(--accent-to));
     border-color: transparent;
     color: #ffffff;
-    text-shadow: 0 1px 2px rgba(2, 6, 23, 0.2);
 }
 
 .btn-primary:hover,
@@ -283,6 +282,12 @@ section {
     background-image: linear-gradient(135deg, var(--accent-from), var(--accent-to));
     border-color: transparent;
     color: #ffffff;
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus {
+    color: #0a0a0a;
 }
 
 .btn-outline-primary {

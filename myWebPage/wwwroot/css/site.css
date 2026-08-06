@@ -140,6 +140,12 @@ section {
     padding-bottom: 96px;
 }
 
+/* Section anchors land below the sticky navbar */
+#whoami, #study, #aboutme, #job-1, #job-2,
+#education, #certifications, #projects, #languages, #softskills {
+    scroll-margin-top: 96px;
+}
+
 /* ============================================================
    Navbar — transparent, turns to frosted glass on scroll
    ============================================================ */
@@ -193,6 +199,86 @@ section {
     width: 100%;
 }
 
+/* ============================================================
+   Navbar dropdowns — CSS hover (desktop) + tap accordion (mobile)
+   ============================================================ */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-head {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-dropdown-toggle {
+    font-family: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.4rem;
+    color: var(--text-secondary);
+    line-height: 1;
+}
+
+.nav-dropdown-toggle:hover {
+    color: var(--accent-from);
+}
+
+.nav-dropdown-caret {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    transition: transform 200ms ease;
+}
+
+.nav-dropdown.open .nav-dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    min-width: 230px;
+    margin: 0;
+    padding: 0.6rem 0.5rem 0.5rem;
+    list-style: none;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-item {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    border-radius: calc(var(--radius) - 6px);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.nav-dropdown-item:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-from);
+}
+
 .navbar-toggler {
     color: var(--text-primary);
     border-color: var(--border-color);
@@ -215,6 +301,47 @@ section {
     background-color: var(--bg-primary);
 }
 
+/* Navbar controls (language selector + theme toggle) */
+.navbar-tools {
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.lang-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--bg-primary);
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 7px 9px;
+    border-radius: calc(var(--radius) - 4px);
+    transition: color 200ms ease, background-color 200ms ease;
+}
+
+.lang-btn:hover {
+    color: var(--accent-from);
+}
+
+.lang-btn.active {
+    background-image: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+    color: #ffffff;
+}
+
+[data-theme="dark"] .lang-btn.active {
+    color: #0a0a0a;
+}
+
 /* Theme toggle (navbar) */
 .theme-toggle {
     display: inline-flex;
@@ -223,7 +350,6 @@ section {
     width: 40px;
     height: 40px;
     padding: 0;
-    margin-left: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     background-color: var(--bg-primary);
@@ -245,11 +371,47 @@ section {
         padding: 0.5rem 0;
     }
 
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-dropdown-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-dropdown-toggle {
+        padding: 0.5rem;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        padding: 0.25rem 0 0.5rem 1rem;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: block;
+    }
+
     .navbar-collapse {
         background-color: var(--bg-primary);
         border-radius: var(--radius);
         padding: 0.5rem 1rem;
         box-shadow: var(--shadow-md);
+    }
+
+    .navbar-tools {
+        flex-wrap: wrap;
+        padding-top: 0.75rem;
+        margin-left: 0;
     }
 }
 
@@ -534,7 +696,7 @@ section {
 }
 
 /* ============================================================
-   Skills
+   Projects
    ============================================================ */
 .skill-card .card-body {
     padding: 2rem 1.5rem;

@@ -8,6 +8,10 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
+        var savedLang = localStorage.getItem('lang');
+        if (savedLang) {
+            document.documentElement.setAttribute('lang', savedLang);
+        }
     </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,26 +35,91 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
-                        @* <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li> *@
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Experience">Experience</a>
+                        <li class="nav-item nav-dropdown">
+                            <div class="nav-dropdown-head">
+                                <a class="nav-link" asp-area="" asp-page="/Index" data-i18n="nav.home">Home</a>
+                                <button type="button" class="nav-dropdown-toggle" aria-label="Toggle submenu" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-chevron-down nav-dropdown-caret"></i>
+                                </button>
+                            </div>
+                            <ul class="nav-dropdown-menu">
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Index" asp-fragment="whoami" data-i18n="nav.home.whoami">Who am I?</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Index" asp-fragment="study" data-i18n="nav.home.study">Where did I study?</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Index" asp-fragment="aboutme" data-i18n="nav.home.about">About me</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-dropdown">
+                            <div class="nav-dropdown-head">
+                                <a class="nav-link" asp-area="" asp-page="/Experience" data-i18n="nav.experience">Experience</a>
+                                <button type="button" class="nav-dropdown-toggle" aria-label="Toggle submenu" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-chevron-down nav-dropdown-caret"></i>
+                                </button>
+                            </div>
+                            <ul class="nav-dropdown-menu">
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Experience" asp-fragment="job-1" data-i18n="nav.experience.job1">Java / React.js Developer</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Experience" asp-fragment="job-2" data-i18n="nav.experience.job2">ERP & Database Systems Analyst</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-dropdown">
+                            <div class="nav-dropdown-head">
+                                <a class="nav-link" asp-area="" asp-page="/Studies" data-i18n="nav.studies">Studies</a>
+                                <button type="button" class="nav-dropdown-toggle" aria-label="Toggle submenu" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-chevron-down nav-dropdown-caret"></i>
+                                </button>
+                            </div>
+                            <ul class="nav-dropdown-menu">
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Studies" asp-fragment="education" data-i18n="nav.studies.education">Education</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/Studies" asp-fragment="certifications" data-i18n="nav.studies.certifications">Certifications</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-dropdown">
+                            <div class="nav-dropdown-head">
+                                <a class="nav-link" asp-area="" asp-page="/ProjectsSkills" data-i18n="nav.projects">Projects &amp; Skills</a>
+                                <button type="button" class="nav-dropdown-toggle" aria-label="Toggle submenu" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-chevron-down nav-dropdown-caret"></i>
+                                </button>
+                            </div>
+                            <ul class="nav-dropdown-menu">
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/ProjectsSkills" asp-fragment="projects" data-i18n="nav.projects.section">Projects</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/ProjectsSkills" asp-fragment="languages" data-i18n="nav.projects.languages">Languages</a>
+                                </li>
+                                <li>
+                                    <a class="nav-dropdown-item" asp-area="" asp-page="/ProjectsSkills" asp-fragment="softskills" data-i18n="nav.projects.softskills">Soft Skills</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Studies">Studies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Skills">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Contact">Contact</a>
+                            <a class="nav-link" asp-area="" asp-page="/Contact" data-i18n="nav.contact">Contact</a>
                         </li>
                     </ul>
-                    <button type="button" id="themeToggle" class="btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
-                        <i class="bi bi-moon-stars theme-icon-dark"></i>
-                        <i class="bi bi-sun theme-icon-light"></i>
-                    </button>
+                    <div class="navbar-tools d-flex align-items-center">
+                        <div class="lang-selector" role="group" aria-label="Language selector">
+                            <button type="button" class="lang-btn" data-lang="es" title="Español">ES</button>
+                            <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+                            <button type="button" class="lang-btn" data-lang="ko" title="한국어">KO</button>
+                        </div>
+                        <button type="button" id="themeToggle" class="btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+                            <i class="bi bi-moon-stars theme-icon-dark"></i>
+                            <i class="bi bi-sun theme-icon-light"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -66,6 +135,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/i18n.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

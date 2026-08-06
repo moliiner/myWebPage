@@ -1,50 +1,22 @@
 @page
-@model SkillsModel
+@model ProjectsSkillsModel
 @{
-    ViewData["Title"] = "Projects";
+    ViewData["Title"] = "Projects & Skills";
 }
 
 <!-- Add Devicon CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <div class="container page-container">
-    <h1 class="section-title">PROJECTS &amp; SKILLS</h1>
-
-    <!-- Languages Section -->
-    <div class="row justify-content-center text-center mb-5 g-4">
-        <div class="col-md-4">
-            <div class="card h-100 skill-card">
-                <div class="card-body">
-                    <img src="~/img/es.jpg" alt="Spanish" class="language-flag mb-3">
-                    <h4 class="skill-label">NATIVE</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 skill-card">
-                <div class="card-body">
-                    <img src="~/img/gb.jpg" alt="English" class="language-flag mb-3">
-                    <h4 class="skill-label">FULL PROFESSIONAL PROFICIENCY</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 skill-card">
-                <div class="card-body">
-                    <img src="~/img/kr.jpg" alt="Korean" class="language-flag mb-3">
-                    <h4 class="skill-label">CONVERSATIONAL</h4>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="section-title" data-i18n="projects.title">PROJECTS &amp; SKILLS</h1>
 
     <!-- Projects Section -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="projects">
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="fw-bold mb-2">AI-Powered Job Search Automation</h4>
-                    <p class="text-muted mb-3">
+                    <h4 class="fw-bold mb-2" data-i18n="projects.project1.title">AI-Powered Job Search Automation</h4>
+                    <p class="text-muted mb-3" data-i18n="projects.project1.description">
                         Python pipeline that integrates external APIs, uses an LLM to evaluate and score information
                         in a structured way, stores historical results, and presents them in an interactive dashboard
                         with automatic notifications.
@@ -57,14 +29,14 @@
                         <span class="tech-pill">Data Pipelines</span>
                         <span class="tech-pill">Telegram Bot API</span>
                     </div>
-                    <a href="https://github.com/moliiner/job_tracker_korea" class="btn btn-outline-primary btn-sm mt-3" target="_blank" rel="noopener noreferrer">EXPLORE</a>
+                    <a href="https://github.com/moliiner/job_tracker_korea" class="btn btn-outline-primary btn-sm mt-3" target="_blank" rel="noopener noreferrer" data-i18n="common.explore">EXPLORE</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-body">
-                    <h4 class="fw-bold mb-2">Product Format Management Tool</h4>
-                    <p class="text-muted mb-3">
+                    <h4 class="fw-bold mb-2" data-i18n="projects.project2.title">Product Format Management Tool</h4>
+                    <p class="text-muted mb-3" data-i18n="projects.project2.description">
                         Internal .NET application with role-based access control that securely manages the critical
                         master data of 2,200+ product formats and 200,000 SKUs, with full change auditing and Active
                         Directory integration for per-format image management.
@@ -81,8 +53,8 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h4 class="fw-bold mb-2">ERP–WMS Load-Date Synchronization System</h4>
-                    <p class="text-muted mb-3">
+                    <h4 class="fw-bold mb-2" data-i18n="projects.project3.title">ERP–WMS Load-Date Synchronization System</h4>
+                    <p class="text-muted mb-3" data-i18n="projects.project3.description">
                         SQL Server integration layer (triggers + stored procedures) that syncs load-date changes in
                         real time between an external carrier app and the ERP, removing manual coordination for
                         ~1,000 daily goods movements, with automatic alerts on discrepancies.
@@ -103,11 +75,11 @@
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="fw-bold mb-3">OTHER CONTRIBUTIONS</h4>
+                    <h4 class="fw-bold mb-3" data-i18n="projects.contributions.title">OTHER CONTRIBUTIONS</h4>
                     <ul class="list-unstyled soft-skills-list mb-3">
-                        <li><strong>• Resolution of 1,000+ production incidents in SQL Server and Microsoft Dynamics 365 through agile triage</strong></li>
-                        <li><strong>• Secure storage architecture on AWS Wasabi with SHA-256 hashing</strong></li>
-                        <li><strong>• Recurring report generation with SQL Server Management Studio and Crystal Reports</strong></li>
+                        <li><strong>• <span data-i18n="projects.contributions.li1">Resolution of 1,000+ production incidents in SQL Server and Microsoft Dynamics 365 through agile triage</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.contributions.li2">Secure storage architecture on AWS Wasabi with SHA-256 hashing</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.contributions.li3">Recurring report generation with SQL Server Management Studio and Crystal Reports</span></strong></li>
                     </ul>
                     <div class="tech-pills">
                         <span class="tech-pill">Microsoft Dynamics 365</span>
@@ -125,9 +97,9 @@
         <div class="col-lg-10">
             <div class="card">
                 <div class="card-body text-center">
-                    <span class="status-badge">IN PROGRESS</span>
-                    <h4 class="fw-bold mb-2 mt-2">COMING SOON</h4>
-                    <p class="text-muted mb-0">
+                    <span class="status-badge" data-i18n="projects.comingsoon.status">IN PROGRESS</span>
+                    <h4 class="fw-bold mb-2 mt-2" data-i18n="projects.comingsoon.title">COMING SOON</h4>
+                    <p class="text-muted mb-0" data-i18n="projects.comingsoon.description">
                         New data-oriented projects — analytics dashboards and machine learning models — are taking
                         shape and will be showcased here as they come together.
                     </p>
@@ -136,29 +108,43 @@
         </div>
     </div>
 
-    <!-- Soft Skills Section -->
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card">
+    <!-- Skills Section -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 skill-card" id="languages">
                 <div class="card-body">
-                    <div class="row text-center">
-                        <div class="col-md-6 mb-3">
-                            <ul class="list-unstyled soft-skills-list">
-                                <li><strong>• PROBLEM SOLVING</strong></li>
-                                <li><strong>• LOGICAL THINKING</strong></li>
-                                <li><strong>• TASK ORGANIZATION</strong></li>  
-                                <li><strong>• INCIDENT TRIAGE & ROOT-CAUSE ANALYSIS</strong></li>
-                            </ul>
+                    <h4 class="fw-bold text-center mb-4" data-i18n="nav.projects.languages">Languages</h4>
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <img src="~/img/es.jpg" alt="Spanish" class="language-flag mb-2">
+                            <h4 class="skill-label" data-i18n="projects.spanish.label">NATIVE</h4>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <ul class="list-unstyled soft-skills-list">
-                                <li><strong>• DATA CLEANING</strong></li>
-                                <li><strong>• TEAMWORK</strong></li>
-                                <li><strong>• CONTINUOUS LEARNING</strong></li>
-                                <li><strong>• CAR DRIVING LICENSE</strong></li>
-                            </ul>
+                        <div class="mb-4">
+                            <img src="~/img/gb.jpg" alt="English" class="language-flag mb-2">
+                            <h4 class="skill-label" data-i18n="projects.english.label">FULL PROFESSIONAL PROFICIENCY</h4>
+                        </div>
+                        <div class="mb-0">
+                            <img src="~/img/kr.jpg" alt="Korean" class="language-flag mb-2">
+                            <h4 class="skill-label" data-i18n="projects.korean.label">CONVERSATIONAL</h4>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100" id="softskills">
+                <div class="card-body">
+                    <h4 class="fw-bold text-center mb-4" data-i18n="nav.projects.softskills">Soft Skills</h4>
+                    <ul class="list-unstyled soft-skills-list mb-0">
+                        <li><strong>• <span data-i18n="projects.soft.problemSolving">PROBLEM SOLVING</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.logicalThinking">LOGICAL THINKING</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.taskOrganization">TASK ORGANIZATION</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.triage">INCIDENT TRIAGE & ROOT-CAUSE ANALYSIS</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.dataCleaning">DATA CLEANING</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.teamwork">TEAMWORK</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.continuousLearning">CONTINUOUS LEARNING</span></strong></li>
+                        <li><strong>• <span data-i18n="projects.soft.drivingLicense">CAR DRIVING LICENSE</span></strong></li>
+                    </ul>
                 </div>
             </div>
         </div>

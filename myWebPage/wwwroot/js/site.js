@@ -55,4 +55,39 @@
             revealEls.forEach(function (el) { observer.observe(el); });
         }
     }
+
+    // Navbar dropdowns: tap/keyboard toggle (mobile accordion); desktop hover is CSS
+    document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
+        var toggle = dd.querySelector('.nav-dropdown-toggle');
+        if (!toggle) return;
+        toggle.addEventListener('click', function () {
+            var isOpen = dd.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (isOpen) {
+                document.querySelectorAll('.nav-dropdown.open').forEach(function (other) {
+                    if (other !== dd) {
+                        other.classList.remove('open');
+                        var t = other.querySelector('.nav-dropdown-toggle');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+        dd.addEventListener('mouseleave', function () {
+            dd.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Close the hamburger menu after picking a section (mobile)
+    document.querySelectorAll('.nav-dropdown-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+            var collapse = document.querySelector('.navbar-collapse.show');
+            if (collapse) {
+                collapse.classList.remove('show');
+                var toggler = document.querySelector('.navbar-toggler');
+                if (toggler) toggler.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 });

@@ -10,9 +10,12 @@
         <div class="row align-items-center g-5">
             <!-- Left Column: Text -->
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-1">Hello!</h1>
-                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-2">I'm Javier Moliner</h1>
-                <p class="lead mb-4 fs-4 text-muted hero-anim hero-anim-3">Software Engineer with 2+ years of <br>experience in .NET and SQL.</p>
+                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-1" data-i18n="hero.greeting">Hello!</h1>
+                <h1 class="display-3 fw-bold mb-3 hero-anim hero-anim-2" data-i18n="hero.name">I'm Javier Moliner</h1>
+                <p class="lead mb-4 fs-4 text-muted hero-anim hero-anim-3">
+                    <span data-i18n="hero.subtitle.p1">Software Engineer with 2+ years of</span> <br>
+                    <span data-i18n="hero.subtitle.p2">experience in .NET and SQL.</span>
+                </p>
             </div>
 
             <!-- Right Column: Photo and Contact Button -->
@@ -21,23 +24,23 @@
                     <img src="~/img/jmoliner.png" alt="Javier Moliner" class="hero-portrait">
                 </div>
                 <div class="hero-anim hero-anim-5">
-                    <a asp-page="/Contact" class="btn btn-primary btn-lg fw-bold px-5 py-3">CONTACT ME</a>
+                    <a asp-page="/Contact" class="btn btn-primary btn-lg fw-bold px-5 py-3" data-i18n="contact.title">CONTACT ME</a>
                 </div>
             </div>
         </div>
     </div>
-    <a href="#who-am-i" class="scroll-indicator" aria-label="Scroll down to the next section">
+    <a href="#whoami" class="scroll-indicator" aria-label="Scroll down to the next section">
         <i class="bi bi-chevron-double-down"></i>
     </a>
 </section>
 
 <!-- Who I am? Section -->
-<section class="bg-white" id="who-am-i">
+<section class="bg-white" id="whoami">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title">WHO AM I?</h2>
-                <p class="lead text-muted">
+                <h2 class="section-title" data-i18n="whoami.title">WHO AM I?</h2>
+                <p class="lead text-muted" data-i18n="whoami.paragraph">
                     Computer engineer with over 2 years of experience as a SQL and .NET developer, designing integration systems between 
                     ERP and WMS platforms and resolving 1,000+ production incidents across a large enterprise group. I specialize in process 
                     automation using stored procedures, triggers, and internal tools that improve data integrity and operational efficiency. 
@@ -53,12 +56,12 @@
 </section>
 
 <!-- Where did I study? Section -->
-<section class="bg-light">
+<section class="bg-light" id="study">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title">WHERE DID I STUDY?</h2>
-                <p class="lead text-muted">
+                <h2 class="section-title" data-i18n="wherestudy.title">WHERE DID I STUDY?</h2>
+                <p class="lead text-muted" data-i18n="wherestudy.paragraph">
                     I studied Computer Engineering for four years at Universitat Jaume I (Spain), where I built the strong technical and 
                     analytical foundation I still lean on today — the same analytical mindset I now apply to data analysis. Along the way, 
                     I also completed a one-year academic exchange at Sejong University (South Korea), an experience that broadened my 
@@ -71,12 +74,12 @@
 </section>
 
 <!-- About me Section -->
-<section class="bg-white">
+<section class="bg-white" id="aboutme">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="section-title">ABOUT ME</h2>
-                <p class="lead text-muted">
+                <h2 class="section-title" data-i18n="about.title">ABOUT ME</h2>
+                <p class="lead text-muted" data-i18n="about.paragraph">
                     I am passionate about technology, data analysis, and digital innovation, and I'm always looking to go deeper into 
                     the tools and methodologies of data analysis and data science. Beyond the technical side, I am a collaborative person 
                     who works well in a team and keeps an open mind toward continuous learning — always willing to learn new technologies, 

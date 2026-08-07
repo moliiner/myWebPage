@@ -361,3 +361,42 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+## ---------------------------------------------------------------------
+## Project-specific: secrets & sensitive data (myWebPage)
+## ---------------------------------------------------------------------
+
+# App configuration that may contain connection strings, API keys, or
+# email/SMTP credentials. Keep appsettings.json as a committed TEMPLATE
+# with placeholder values only; real secrets go in appsettings.*.local.json
+# or, better, in `dotnet user-secrets` (never committed) / environment
+# variables in production.
+appsettings.*.local.json
+appsettings.Production.json
+appsettings.Secrets.json
+
+# .NET user-secrets id file (points to a local secrets store, not the
+# secrets themselves, but no reason to commit it either)
+secrets.json
+
+# Environment files (API keys, tokens) if you ever add a build step,
+# a contact-form backend, or connect this site to any external API
+.env
+.env.*
+!.env.example
+
+# TLS/SSL certificates and private keys
+*.pfx
+*.key
+*.pem
+*.crt
+
+# Local database files (if you ever add SQLite/LocalDB for a contact
+# form backend, analytics, etc.)
+*.db
+*.sqlite
+*.sqlite3
+
+# OS junk files
+.DS_Store
+Thumbs.db

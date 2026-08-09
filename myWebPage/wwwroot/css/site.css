@@ -706,6 +706,13 @@ section {
     margin-bottom: 0;
 }
 
+/* Skills section titles — bump from h4 to h3-ish, keep bold, add breathing room */
+#languages h4.fw-bold,
+#softskills h4.fw-bold {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
 .language-flag {
     width: 120px;
     height: 80px;

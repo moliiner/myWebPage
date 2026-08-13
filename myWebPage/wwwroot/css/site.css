@@ -764,6 +764,18 @@ section {
     font-size: 1.05rem;
 }
 
+/* Project origin badge — reuses .status-badge base, neutral variant for personal */
+.status-badge i {
+    margin-right: 0.35rem;
+}
+
+.status-badge--personal,
+[data-theme="dark"] .status-badge--personal {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
 /* ============================================================
    Footer
    ============================================================ */

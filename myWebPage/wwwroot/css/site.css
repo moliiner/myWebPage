@@ -777,6 +777,59 @@ section {
 }
 
 /* ============================================================
+   Certifications — progress bar + compact certificate list
+   ============================================================ */
+.cert-progress {
+    height: 8px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.cert-progress--bar {
+    height: 100%;
+    width: 0;
+    background-image: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+    border-radius: 999px;
+}
+
+.cert-list--label {
+    margin-bottom: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-secondary);
+}
+
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.cert-list--item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    transition: color 200ms ease;
+}
+
+.cert-list--item:hover {
+    color: var(--accent-from);
+}
+
+.cert-list--item i {
+    font-size: 0.95rem;
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .footer {
